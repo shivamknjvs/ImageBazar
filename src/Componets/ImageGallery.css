@@ -1,0 +1,35 @@
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4vh;
+    margin-inline: auto;
+    max-width: 100rem;
+    background: whitesmoke;
+    padding: 4vh;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+ .gallery > img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.gallery:has(img:hover) img:not(:hover) {
+    scale: 0.8;
+    opacity: 0.5;
+    filter: grayscale(70%);
+    cursor: pointer;
+}
+img{
+    cursor: pointer;
+
+
+}
+.delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
