@@ -8,8 +8,15 @@ import Navbar from "./Componets/Navbar";
 import Footer from "./Componets/Footer";
 import Admin from "./Componets/Admin";
 const App = () => {
-  const [currentUser, setCurrentUser] = useState(null);
-  const [hasAccess, setHasAccess] = useState(false);
+  
+  const isLocalStorageEmpty = localStorage.length === 0;
+  var user=null;
+  console.log("isLocalStorage",(isLocalStorageEmpty));
+  !isLocalStorageEmpty?user=(localStorage.getItem("currentUser")):null
+  
+  console.log("type of user", (user))
+  const [currentUser, setCurrentUser] = useState(user!="undefined"?user:null);
+  const [hasAccess, setHasAccess] = useState(user!=null&&user!="undefined"?JSON.parse(localStorage.getItem(user)).hasAccess:null);
   const [isAdmin, setIsAdmin] = useState(false);
 
 

@@ -18,7 +18,7 @@ const Home = ({ currentUser, setHasAccess, hasAccess }) => {
         const newImage = {
           id: new Date().getTime(),
           name: selectedImage.name,
-          uploadedBy: currentUser.username,
+          uploadedBy: currentUser,
           data: e.target.result.split(",")[1], // Extract base64 data
         };
 
@@ -43,22 +43,22 @@ const Home = ({ currentUser, setHasAccess, hasAccess }) => {
     // Read the selected image as a data URL
   };
   const subscribe = () => {
-    const user = JSON.parse(localStorage.getItem(currentUser.username));
-    console.log("useeeeer", user);
+    const user = JSON.parse(localStorage.getItem(currentUser));
+    console.log("useeeeer from subscribe ", user);
     user.hasAccess = true;
-    localStorage.setItem(currentUser.username, JSON.stringify(user));
+    localStorage.setItem(currentUser, JSON.stringify(user));
 
     window.alert("Thanks for subscribing");
     setHasAccess(true);
   };
 
-  console.log("currrrent user", currentUser);
+  console.log("currrrent user", typeof(currentUser));
 
   var currentUserImages = currentUser
-    ? galleryImages.filter((image) => image.uploadedBy === currentUser.username)
+    ? galleryImages.filter((image) => image.uploadedBy == currentUser)
     : [];
   var otherUserImages = currentUser
-    ? galleryImages.filter((image) => image.uploadedBy != currentUser.username)
+    ? galleryImages.filter((image) => image.uploadedBy != currentUser)
     : [];
 
   console.log("currentUser from homeeeee", currentUserImages);

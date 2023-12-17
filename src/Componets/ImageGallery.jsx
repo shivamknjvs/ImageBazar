@@ -13,7 +13,7 @@ const ImageGallery = ({ userImages, isAdmin, handleDeleteImage}) => {
   };
   return (
     <>
-    <span className='delete'> <h2>Click on the image to delete it</h2></span>
+   {isAdmin&&<span className='delete'> <h2>Click on the image to delete it</h2></span>}
     <div className="gallery "  >
     
       {userImages.map((image) => (

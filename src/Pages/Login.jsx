@@ -18,7 +18,7 @@ const Login = ({ setCurrentUser }) => {
     console.log(username);
     if (user && user.password === password) {
       localStorage.setItem("currentUser", username);
-      setCurrentUser(user);
+      setCurrentUser(username);
       navigate("/");
     } else {
       alert("Invalid username or password");

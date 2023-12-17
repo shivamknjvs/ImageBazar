@@ -18,7 +18,7 @@ const Signup = ({ setCurrentUser }) => {
       const user = { username, password, hasAccess };
       localStorage.setItem(username, JSON.stringify(user));
 
-      setCurrentUser(user);
+      setCurrentUser(user.username);
       localStorage.setItem("currentUser", username);
       navigate("/");
     }
