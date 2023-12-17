@@ -39,3 +39,11 @@ Image Bazar is a React.js web application that allows users to upload, view, and
 4. Run the development server
    ```bash
    npm run dev
+## Preview
+![image](https://github.com/shivamknjvs/ImageBazar/assets/99579623/76418ff8-05e0-4ad0-9191-7b710306edb2)
+![image](https://github.com/shivamknjvs/ImageBazar/assets/99579623/11b328db-582a-4bf2-ad0b-35199ea1ea0a)
+![image](https://github.com/shivamknjvs/ImageBazar/assets/99579623/647d6f40-11a9-4d0f-b9af-c373d28514e9)
+
+
+
+   
