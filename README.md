@@ -31,3 +31,13 @@ Image Bazar is a React.js web application that allows users to upload, view, and
 
    ```bash
    git clone https://github.com/your-username/image-bazar.git
+
+2. Navigate to the project directory:
+    ```bash
+   cd image-bazar
+3. Install dependencies:
+   ```bash
+   npm install
+4. Run the development server
+   ```bash
+   npm run dev
