@@ -1,4 +1,4 @@
-// Login.js
+ad// Login.js
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
@@ -43,7 +43,7 @@ const Login = ({ setCurrentUser }) => {
       
       <input type="submit" value="Log In" onClick={handleLogin} />
       <div class="links">
-      <Link to="/"> Admin Login</Link>
+      <Link to="/admin"> Admin Login</Link>
         <Link to="/signup"> Register</Link>
 
       </div>
