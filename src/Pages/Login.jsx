@@ -43,7 +43,7 @@ const Login = ({ setCurrentUser }) => {
       
       <input type="submit" value="Log In" onClick={handleLogin} />
       <div class="links">
-      <Link to="/"> Admin Login</Link>
+      <Link to="/admin"> Admin Login</Link>
         <Link to="/signup"> Register</Link>
 
       </div>
