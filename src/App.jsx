@@ -16,7 +16,11 @@ const App = () => {
   
   console.log("type of user", (user))
   const [currentUser, setCurrentUser] = useState(user!="undefined"?user:null);
-  const [hasAccess, setHasAccess] = useState(user!=null&&user!="undefined"?JSON.parse(localStorage.getItem(user)).hasAccess:null);
+    const [hasAccess, setHasAccess] = useState(
+    user != "admin" && user != null && user != "undefined"
+      ? JSON.parse(localStorage.getItem(user)).hasAccess
+      : null
+  );
   const [isAdmin, setIsAdmin] = useState(false);
 
 
