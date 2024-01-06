@@ -11,7 +11,7 @@ const Navbar = ({currentUser,setHasAccess, setCurrentUser, isAdmin, setIsAdmin})
     setCurrentUser(null);
     setHasAccess(false);
     setIsAdmin(false);
-    localStorage.setItem("currentUser", currentUser.username);
+    localStorage.setItem("currentUser",null);
     usenavigate('/');
   }
   return (
