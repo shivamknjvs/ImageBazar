@@ -12,7 +12,7 @@ const App = () => {
   const isLocalStorageEmpty = localStorage.length === 0;
   var user=null;
   console.log("isLocalStorage",(isLocalStorageEmpty));
-  !isLocalStorageEmpty?user=(localStorage.getItem("currentUser")):null
+   !(isLocalStorageEmpty || localStorage.getItem("currentUser"))? (user = localStorage.getItem("currentUser")) : null;
   
   console.log("type of user", (user))
   const [currentUser, setCurrentUser] = useState(user!="undefined"?user:null);
